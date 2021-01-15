@@ -3,17 +3,17 @@ ctx = canvas.getContext("2d");
 
 background_image = "Car Racing Image.jpg";
 
-car1_width = 120;
-car1_height = 70;
+car1_width = 100;
+car1_height = 100;
 car1_image = "Car_1.png";
-car1_x = 10;
-car1_y = 10;
+car1_x = 75;
+car1_y = 475;
 
-car2_width = 120;
-car2_height = 70;
+car2_width = 100;
+car2_height = 100;
 car2_image = "Car_2.png";
-car2_x = 10;
-car2_y = 100;
+car2_x = 500;
+car2_y = 475;
 
 function add(){
     background_imgTag = new Image();
@@ -70,7 +70,7 @@ function my_keydown(e){
 
 
 
-    
+
     if(keyPressed == "87"){
         car2_up();
         console.log("key w")
@@ -89,5 +89,79 @@ function my_keydown(e){
     if(keyPressed == "68"){
         car2_right();
         console.log("key d")
+    }
+}
+
+function car1_up(){
+    if(car1_y >= 0){
+        car1_y = car1_y - 10;
+        uploadbackground();
+        uploadcar1();
+        uploadcar2();
+    }
+}
+
+function car1_down(){
+    if(car1_y <= 500){
+        car1_y = car1_y + 10;
+        uploadbackground();
+        uploadcar1();
+        uploadcar2();
+    }
+}
+
+function car1_left(){
+    if(car1_x >= 0){
+        car1_x = car1_x - 10;
+        uploadbackground();
+        uploadcar1();
+        uploadcar2();
+    }
+}
+
+function car1_right(){
+    if(car1_x <= 0){
+        car1_x = car1_x + 10;
+        uploadbackground();
+        uploadcar1();
+        uploadcar2();
+    }
+}
+
+
+
+function car2_up(){
+    if(car2_y >= 0){
+        car2_y = car2_y - 10;
+        uploadbackground();
+        uploadcar1();
+        uploadcar2();
+    }
+}
+
+function car2_down(){
+    if(car2_y <= 500){
+        car2_y = car2_y + 10;
+        uploadbackground();
+        uploadcar1();
+        uploadcar2();
+    }
+}
+
+function car2_left(){
+    if(car2_x >= 0){
+        car2_x = car2_x - 10;
+        uploadbackground();
+        uploadcar1();
+        uploadcar2();
+    }
+}
+
+function car2_right(){
+    if(car2_x <= 0){
+        car2_x = car2_x + 10;
+        uploadbackground();
+        uploadcar1();
+        uploadcar2();
     }
 }
