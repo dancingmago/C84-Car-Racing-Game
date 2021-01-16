@@ -5,13 +5,13 @@ background_image = "Car Racing Image.jpg";
 
 car1_width = 100;
 car1_height = 100;
-car1_image = "Car_1.png";
+car1_image = "car1.png";
 car1_x = 75;
 car1_y = 475;
 
 car2_width = 100;
 car2_height = 100;
-car2_image = "Car_2.png";
+car2_image = "car2.png";
 car2_x = 500;
 car2_y = 475;
 
@@ -90,6 +90,18 @@ function my_keydown(e){
         car2_right();
         console.log("key d")
     }
+
+    
+
+    if(car1_x > 700){
+        console.log("car1 won!");
+        document.getElementById("game_status").innerHTML = "Car1 Won!";
+    }
+
+    if(car2_x < 700){
+        console.log("car2 won!");
+        document.getElementById("game_status").innerHTML = "Car2 Won!";
+    }
 }
 
 function car1_up(){
@@ -120,7 +132,7 @@ function car1_left(){
 }
 
 function car1_right(){
-    if(car1_x <= 0){
+    if(car1_x >= 0){
         car1_x = car1_x + 10;
         uploadbackground();
         uploadcar1();
@@ -158,7 +170,7 @@ function car2_left(){
 }
 
 function car2_right(){
-    if(car2_x <= 0){
+    if(car2_x >= 0){
         car2_x = car2_x + 10;
         uploadbackground();
         uploadcar1();
